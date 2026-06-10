@@ -21,9 +21,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    bachgroundcolor:'#39144A'
   },
   title: {
     fontSize: 28,
     fontWeight: 'bold',
+    fontColor:'#ffffff'
   },
 })

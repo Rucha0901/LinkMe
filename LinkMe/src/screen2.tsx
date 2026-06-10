@@ -42,7 +42,7 @@ export default function screen2({ navigation }) {
       return;
     }
 
-    navigation.navigate('ProfileLinks', {
+    navigation.navigate('screen3', {
       name,
       selectedApps,
     });
