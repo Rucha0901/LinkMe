@@ -1,16 +1,17 @@
-import { View,
+import {
   Text,
   TextInput,
   TouchableOpacity,
   StyleSheet,
-  ScrollView, } from 'react-native'
+  ScrollView,
+  Alert } from 'react-native'
 import React, {useState} from 'react'
 
 
-export default function screen2({ navigation }) {
+export default function Screen2({ navigation }:any) {
   const [name, setName] = useState('');
 
-  const [selectedApps, setSelectedApps] = useState([]);
+  const [selectedApps, setSelectedApps] = useState<string[]>([]);
 
   const socialApps = [
     'Instagram',
@@ -21,7 +22,7 @@ export default function screen2({ navigation }) {
     'YouTube',
   ];
 
-  const toggleApp = (app) => {
+  const toggleApp = (app:string) => {
     if (selectedApps.includes(app)) {
       setSelectedApps(
         selectedApps.filter((item) => item !== app)
@@ -33,12 +34,12 @@ export default function screen2({ navigation }) {
 
   const handleNext = () => {
     if (!name.trim()) {
-      alert('Please enter your name');
+      Alert.alert('Please enter your name');
       return;
     }
 
     if (selectedApps.length === 0) {
-      alert('Please select at least one social app');
+      Alert.alert('Please select at least one social app');
       return;
     }
 
